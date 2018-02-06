@@ -10,14 +10,15 @@ if (!fs.existsSync(dest)) {
   fs.mkdirSync(dest);
 }
 
-convertExcel ('photos.xlsx', undefined, undefined, (err, data) => {
+// Store number of images to download
+const count = process.argv[2] || 1;
+
+convertExcel ('images.xlsx', undefined, undefined, (err, data) => {
   const images = [];
 
-  data.map(row => {
-    if (images.length < 10) {
-      images.push(row.vcImagePath);
-    }
-  });
+  for (let i = 0; i < count; i++) {
+    images.push(data[i].vcImagePath);
+  }
   
   // Download images from urls
   download (images, dest)
