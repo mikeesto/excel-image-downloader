@@ -1,0 +1,23 @@
+{
+  "name": "excel-image-downloader",
+  "version": "1.0.0",
+  "description": "A Node.js script for downloading image files from a spreadsheet",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelE1/excel-image-downloader.git"
+  },
+  "author": "Michael Esteban",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MichaelE1/excel-image-downloader/issues"
+  },
+  "homepage": "https://github.com/MichaelE1/excel-image-downloader#readme",
+  "dependencies": {
+    "excel-as-json": "^2.0.1",
+    "images-downloader": "^1.0.3"
+  }
+}
