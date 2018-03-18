@@ -17,7 +17,7 @@ convertExcel ('images.xlsx', undefined, undefined, (err, data) => {
   const images = [];
 
   for (let i = 0; i < count; i++) {
-    images.push(data[i].vcImagePath);
+    images.push(data[i].ImagePath);
   }
   
   // Download images from urls

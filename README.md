@@ -1,6 +1,6 @@
 # Excel Image Downloader
 
-A Node.js script for downloading image files from a spreadsheet.
+A Node.js script for downloading image files from a spreadsheet containing URLs.
 
 ## Usage
 
@@ -10,7 +10,7 @@ A Node.js script for downloading image files from a spreadsheet.
     npm install
     ```
 3. Move your excel spreadsheet to the cloned directory and rename it to `images.xlsx`
-4. On line 20 of `app.js`, change `data[i].vcImagePath` to the column heading in your spreadsheet that contains the image URLs.
+4. On line 20 of `app.js`, change `data[i].ImagePath` to the column heading in your spreadsheet that contains the image URLs.
 5. Run the script with
     ```
     node app.js 5
