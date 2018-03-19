@@ -19,6 +19,13 @@ A Python script for downloading image files from a spreadsheet containing URLs.
     
     Where 5 indicates the number of images to be downloaded. If no argument is provided, the default is 1.
 
+    #### OR
+
+    ``` 
+    python app.py 1 10
+    ```
+    Where 1 indicates the starting index, and 10 represents the ending index (inclusive).
+
 6. Look for the newly created `images` directory!
 
 ## License
