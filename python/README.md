@@ -11,7 +11,7 @@ A Python script for downloading image files from a spreadsheet containing URLs.
     pip install xlrd
     ```
 3. Move your excel spreadsheet into the same folder as `app.py` and rename it to `images.xlsx`
-4. On line 25 of `app.py`, change `data[i].vcImagePath` to the column heading in your spreadsheet that contains the image URLs.
+4. On line 25 of `app.py`, change `data['vcImagePath']` to the column heading in your spreadsheet that contains the image URLs.
 5. Run the script with
     ```
     python app.py 5
