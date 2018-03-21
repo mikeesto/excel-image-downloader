@@ -23,19 +23,24 @@ else:
   try:
     endIndex = int(sys.argv[1])
   except IndexError: 
-    endIndex = 1
+    endIndex = 0
 
-# Get list of images from excel spreadsheet
+# Get data from excel spreadsheet
 data = pandas.read_excel('images.xlsx')
-values = data['vcImagePath'].values
-splitValues = values[startIndex:endIndex + 1]
 
-for value in splitValues:
+# Store URL values
+values = data['vcImagePath'].values
+
+# Store IDs
+ids = data['biOcrImageId'].values
+
+splitValues = values[startIndex:endIndex + 1]
+splitIds = ids[startIndex:endIndex + 1]
+
+for index, value in enumerate(splitValues):
   try: 
-    urllib.urlretrieve(value, dest + "/" + str(startIndex) + ".jpg" )
+    urllib.urlretrieve(value, dest + "/" + str(splitIds[index]) + ".jpg" )
   except:
-    print "I could not download image " + str(startIndex)
-  
-  startIndex += 1
+    print "I could not download image " + str(splitIds[index])
 
 print "Images downloaded!"

@@ -9,7 +9,7 @@ A Node.js script for downloading image files from a spreadsheet containing URLs.
     ```
     npm install
     ```
-3. Move your excel spreadsheet to the cloned directory and rename it to `images.xlsx`
+3. Move your excel spreadsheet to the cloned directory and ensure it is saved as `images.xlsx`
 4. On line 20 of `app.js`, change `data[i].ImagePath` to the column heading in your spreadsheet that contains the image URLs.
 5. Run the script with
     ```
